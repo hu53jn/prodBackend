@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "46uqFtsgOg1PXKSXthkGHhV79yn/Sdk8EGs9PnUxnQkncY579x+XRh6xeZ1wN2ClkaTAkY4FUBtFlTueX/sRxA==",
+  "dgSpecHash": "EZZ/z+Fu/q9UkZS792lhhrn3f6CMGnmTkxb7NKzLX8WMEKozn3gbnH2ii5axzdcH3plU+D5QzOnZ0F5SKJUKfg==",
   "success": true,
   "projectFilePath": "C:\\Users\\DTuser3\\source\\repos\\productshop\\productshop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DTuser3\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\DTuser3\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\DTuser3\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\DTuser3\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.8\\microsoft.aspnetcore.authentication.jwtbearer.3.1.8.nupkg.sha512",
     "C:\\Users\\DTuser3\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.8\\microsoft.aspnetcore.jsonpatch.3.1.8.nupkg.sha512",
     "C:\\Users\\DTuser3\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.8\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.8.nupkg.sha512",
     "C:\\Users\\DTuser3\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -64,5 +64,6 @@ C:\Users\DTuser3\source\repos\productshop\bin\Debug\netcoreapp3.1\AutoMapper.Ext
 C:\Users\DTuser3\source\repos\productshop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\DTuser3\source\repos\productshop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\DTuser3\source\repos\productshop\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\DTuser3\source\repos\productshop\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\DTuser3\source\repos\productshop\obj\Debug\netcoreapp3.1\productshop.csproj.CoreCompileInputs.cache
 C:\Users\DTuser3\source\repos\productshop\obj\Debug\netcoreapp3.1\productshop.MvcApplicationPartsAssemblyInfo.cache

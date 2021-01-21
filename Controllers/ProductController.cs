@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -15,9 +16,8 @@ using productshop.Models;
 
 namespace productshop.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ProductController : ControllerBase
+    [Authorize]
+    public class ProductController : BaseController
     {
         private readonly IUnitOfWork uow;
         private readonly IMapper mapper;
@@ -29,9 +29,9 @@ namespace productshop.Controllers
 
         //GET api/product
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> GetProducts()
         {
-            throw new UnauthorizedAccessException();
             var products = await uow.ProductRepository.GetProductsAsync();
 
             var productsDto = mapper.Map<IEnumerable<ProductDto>>(products);

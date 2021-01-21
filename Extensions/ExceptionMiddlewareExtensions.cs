@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
+using productshop.MIddlewares;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,10 @@ namespace productshop.Extensions
     public static class ExceptionMiddlewareExtensions
     {
         public static void ConfigureExceptionHandler(this IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            app.UseMiddleware<ExceptionMiddleware>();
+        }
+        public static void ConfigureBuiltinExceptionHandler(this IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {

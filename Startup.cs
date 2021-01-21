@@ -21,6 +21,9 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using productshop.Extensions;
 using productshop.MIddlewares;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace productshop
 {
@@ -41,6 +44,24 @@ namespace productshop
             services.AddCors();
             services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            var secretKey = Configuration.GetSection("AppSettings:Key").Value;
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8
+                .GetBytes(secretKey));
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(opt =>
+                {
+                    opt.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        IssuerSigningKey = key
+
+                    };
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +77,8 @@ namespace productshop
             app.UseRouting();
 
             app.UseCors(m => m.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

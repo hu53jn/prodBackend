@@ -17,6 +17,9 @@ namespace productshop.Data
         public IProductRepository ProductRepository => 
             new ProductRepository(dc);
 
+        public IUserRepository UserRepository =>
+            new UserRepository(dc);
+
         public async Task<bool> SaveAsync()
         {
             return await dc.SaveChangesAsync() > 0;
